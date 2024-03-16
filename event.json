@@ -13,7 +13,7 @@
       "CloudFront-Is-Tablet-Viewer": "false",
       "CloudFront-Is-Mobile-Viewer": "false",
       "User-Agent": "...",
-      "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyLCJpc3MiOiJhdXRob3JpemVyMS5jb20ifQ.lTcSfl9UjmXbB-a74IKSzzenbrLq6Ilq1EE1viLvINk" 
+      "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyLCJpc3MiOiJhdXRob3JpemVyMS5jb20iLCJleHAiOjE3NDM0NjU1OTksInNjb3BlcyI6IkFCQyB0ZXN0ZSB0ZXN0MSJ9.rcdaS_SvZ0fkGpHrTZJEHu7LipiTKwWuxY5QAmSP4Rk" 
     },
     "queryStringParameters": {
       "QueryString1": "queryValue1"
