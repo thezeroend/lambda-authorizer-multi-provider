@@ -58,7 +58,7 @@ class AuthorizerGeneric:
 
     @log_class_and_method("Obtendo scopes do token")
     def get_scopes(self):
-        scopes = self.d_token.get('scopes')
+        scopes = self.d_token.get('scope')
         if scopes is not None:
             return scopes.split(" ")
         return None

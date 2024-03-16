@@ -1,0 +1,18 @@
+[
+    {
+        "rota": "/request",
+        "methods": ["GET"],
+        "scopes": [
+            "openid",
+            "email",
+            "treste"
+        ]
+    },
+    {
+        "rota": "/request",
+        "methods": ["GET"],
+        "scopes": [
+            "profile"
+        ]
+    }
+]

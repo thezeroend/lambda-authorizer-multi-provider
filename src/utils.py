@@ -13,3 +13,25 @@ def set_log_level():
     if not isinstance(numeric_level, int):
         raise ValueError(f'Invalid log level: {log_level}')
     logging.basicConfig(level=numeric_level)
+
+def setup_env():
+    ENVS_DEFAULT = {
+        "dev": {
+            "LOG_LEVEL": "debug",
+            "teste": "teste"
+        },
+        "hom": {
+            "LOG_LEVEL": "debug"
+        },
+        "prod": {
+            "LOG_LEVEL": "info"
+        }
+    }
+
+    if os.environ.get('ENV') is None:
+        os.environ['ENV'] = os.environ.get('var1')
+    env = os.environ.get('ENV')
+
+    for key in ENVS_DEFAULT[env]:
+        if os.environ.get(key) is None:
+            os.environ[key] = ENVS_DEFAULT[env][key]
