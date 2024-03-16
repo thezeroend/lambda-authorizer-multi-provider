@@ -3,16 +3,8 @@ import os
 from src.authorizer_factory import AuthorizerFactory
 from src.authorizer_generic import AuthorizerGeneric
 from src.policy_generator import generate_policy
-from src.utils import extract_bearer_token
+from src.utils import extract_bearer_token, set_log_level
 from src.exceptions import HeaderMissing
-
-
-def set_log_level():
-    log_level = os.environ.get('LOG_LEVEL', 'INFO').upper()
-    numeric_level = getattr(logging, log_level, None)
-    if not isinstance(numeric_level, int):
-        raise ValueError(f'Invalid log level: {log_level}')
-    logging.basicConfig(level=numeric_level)
 
 set_log_level()
 authorizer_factory = AuthorizerFactory()
@@ -20,8 +12,8 @@ authorizer_factory = AuthorizerFactory()
 class VerifyAuth:
     def __init__(self, event, context):
         self.event = event
-        self.headers = {key.lower(): value for key, value in event.get('headers', {}).items()}
         self.context = context
+        self.headers = {key.lower(): value for key, value in event.get('headers', {}).items()}
 
     def verify(self):
         if self.headers.get("authorization") is None:
