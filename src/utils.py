@@ -1,3 +1,5 @@
+import os
+import logging
 from src.exceptions import InvalidTokenError
 
 def extract_bearer_token(authorization):
