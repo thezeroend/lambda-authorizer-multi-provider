@@ -1,0 +1,18 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# CPython
+*.pyc
+
+# Cython
+*.pyx
+*.pyd
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Python Virtual Environment
+venv/
+env/
