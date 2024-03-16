@@ -1,4 +1,6 @@
+from src.exceptions import InvalidTokenError
+
 def extract_bearer_token(authorization):
     if authorization.startswith('Bearer '):
-        return authorization[len('Bearer '):]
-    return None
+        return authorization.split(" ")[1]
+    return authorization
