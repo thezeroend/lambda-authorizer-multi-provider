@@ -18,7 +18,10 @@ def setup_env():
     ENVS_DEFAULT = {
         "dev": {
             "LOG_LEVEL": "debug",
-            "teste": "teste"
+            "PROVIDER1_HOST": "https://auth0.openai.com",
+            "PROVIDER1_ISS": "https://auth0.openai.com/",
+            "PROVIDER2_HOST": "https://provider2.com",
+            "PROVIDER2_ISS": "https://provider2.com/",
         },
         "hom": {
             "LOG_LEVEL": "debug"

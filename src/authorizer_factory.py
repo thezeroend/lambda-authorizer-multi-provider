@@ -1,6 +1,7 @@
 import jwt
 import logging
 import traceback
+import os
 from src.provider1_authorizer import Provider1Authorizer
 from src.provider2_authorizer import Provider2Authorizer
 from src.exceptions import InvalidTokenError, TokenExpiredError
@@ -9,8 +10,8 @@ from src.decorators import log_class_and_method
 class AuthorizerFactory:
     def __init__(self):
         self.providers = {
-            'https://auth0.openai.com/': Provider1Authorizer,
-            'authorizer2.com': Provider2Authorizer
+            os.environ.get('PROVIDER1_ISS'): Provider1Authorizer,
+            os.environ.get('PROVIDER2_ISS'): Provider2Authorizer
         }
 
     @log_class_and_method("Iniciando criação do Authorizer")
